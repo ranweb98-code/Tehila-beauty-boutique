@@ -107,6 +107,21 @@
     #setmoreBookingFrame {
       min-height: 720px;
     }
+    .hero-text-panel {
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 8px 32px rgba(45, 45, 45, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+    }
+    @media (min-width: 768px) {
+      .hero-text-panel {
+        background: rgba(255, 255, 255, 0.88);
+        padding: 2rem 2.25rem;
+      }
+    }
   </style>
 </head>
 <body class="font-heebo text-ink antialiased overflow-x-hidden">
@@ -130,9 +145,6 @@
         <a href="#hours" class="nav-link hover:text-gold transition-colors">שעות</a>
         <a href="#contact" class="nav-link hover:text-gold transition-colors">צור קשר</a>
       </nav>
-      <a href="tel:+972524313106" class="md:hidden text-gold text-xl" aria-label="התקשרו">
-        <i class="fas fa-phone"></i>
-      </a>
       <button type="button" id="menuBtn" class="md:hidden p-2 text-ink" aria-label="תפריט">
         <i class="fas fa-bars text-xl"></i>
       </button>
@@ -151,20 +163,20 @@
   <main class="pt-16">
     <!-- Hero -->
     <section id="hero" class="relative min-h-[88vh] flex items-center hero-bg">
-      <div class="absolute inset-0 bg-gradient-to-l from-white/30 via-transparent to-blush/20 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-l from-white/88 via-white/55 to-white/15 pointer-events-none"></div>
       <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-20 w-full">
-        <div data-aos="fade-up" data-aos-duration="900" class="max-w-xl">
-          <p class="text-sm md:text-base text-ink/70 mb-2 font-medium">תהילה בסטיק יפו</p>
+        <div data-aos="fade-up" data-aos-duration="900" class="hero-text-panel max-w-xl">
           <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-ink leading-tight mb-2">
             תהילה ביוטי בוטיק
           </h1>
-          <p class="font-latin text-lg md:text-xl text-ink/70 font-medium mb-4 dir-ltr tracking-wide">
+          <p class="font-latin text-lg md:text-xl text-ink/80 font-medium mb-4 dir-ltr tracking-wide">
             Tehila Beauty Boutique
           </p>
-          <p class="text-xl md:text-2xl text-gold font-semibold mb-6">
+          <p class="text-xl md:text-2xl font-bold text-ink mb-1 leading-snug">
             בוטיק יופי לעיצוב גבות
           </p>
-          <p class="text-ink/80 text-lg mb-8 leading-relaxed">
+          <span class="inline-block h-1 w-16 rounded-full bg-gold mb-6" aria-hidden="true"></span>
+          <p class="text-ink text-lg mb-8 leading-relaxed font-medium">
             יופי, מקצועיות וחוויה מפנקת בלב ירושלים
           </p>
           <div class="flex flex-wrap gap-4">
@@ -172,9 +184,9 @@
               לתיאום תור
               <i class="fas fa-arrow-left text-sm"></i>
             </a>
-            <a href="tel:+972524313106" class="inline-flex items-center gap-2 border-2 border-gold text-gold font-semibold px-6 py-3.5 rounded-full hover:bg-blush transition-colors">
-              <i class="fas fa-phone"></i>
-              <span class="font-latin dir-ltr inline-block">052-431-3106</span>
+            <a href="tel:+972524313106" class="inline-flex items-center gap-2 border-2 border-ink/25 bg-white text-ink font-semibold px-6 py-3.5 rounded-full hover:bg-blush hover:border-gold/50 transition-colors shadow-sm">
+              <i class="fas fa-phone text-gold" aria-hidden="true"></i>
+              <span class="font-latin dir-ltr inline-block tracking-tight">052-431-3106</span>
             </a>
           </div>
         </div>
